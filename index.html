@@ -1,28 +1,24 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather App</title>
-  <link rel="stylesheet" href="css/index-style.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index-style.css">
+    <title>Daily Weather</title>
 </head>
 <body>
-  <div class="app-wrap">
-    <header>
-      <input type="text" autocomplete="off" class="search-box" placeholder="Search for a city..." />
-    </header>
-    <main>
-      <section class="location">
-        <div class="city">New York, US</div>
-        <div class="date">Wednesday 22 July 2020</div>
-      </section>
-      <div class="current">
-        <div class="temp">15<span>°c</span></div>
-        <div class="weather">Sunny</div>
-        <div class="hi-low">13°c / 16°c</div>
-      </div>
-    </main>
-  </div>
-  <script src="js/weather.js"></script>
+    <div class="website-body-currentWeather">
+        <div class="weather-dateDiv">
+            <h3 class="weather-day">Monday</h3>
+            <h4 class="weather-date"> 1 Jan 2000</h4>
+        </div>
+        <div class="weather-cityDiv">
+            <img src="assets/images/location-dot-solid.svg" alt="location-dot-solid">
+            <h4>New York, US</h4>
+        </div>
+        <div class="weather-currentWeather">
+            <img src="assets/images/cloud-solid.svg" alt="cloud-solid">
+            <h2 class="weather-tem">0<span></span></h2>
+        </div>
+    </div>
 </body>
 </html>
