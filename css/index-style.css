@@ -5,4 +5,21 @@
 
 .website-body-currentWeather {
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 50px;
+  background-image: url(../assets/images/weather-background.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: 0px;
+  border-radius: 50%;
+}
+
+.weather-cityDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
