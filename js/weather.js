@@ -28,13 +28,21 @@ const api = {
     date.innerText = dateBuilder(now);
   
     let temp = document.querySelector('.weather-currentWeather .weather-temp');
-    temp.innerHTML = `${Math.round(weather.main.temp)}<span>°c</span>`;
+    temp.innerText = `${Math.round(weather.main.temp)}<span>°c</span>`;
   
     let weather_el = document.querySelector('.weather-currentWeather .weather-name');
     weather_el.innerText = weather.weather[0].main;
   
     let hilow = document.querySelector('.hi-low');
     hilow.innerText = `${Math.round(weather.main.temp_min)}°c / ${Math.round(weather.main.temp_max)}°c`;
+  }
+
+  function dayBuilder (d) {
+    let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+    let day = days[d.getDay()];
+
+    return `${day}`;
   }
   
   function dateBuilder (d) {
@@ -46,5 +54,5 @@ const api = {
     let month = months[d.getMonth()];
     let year = d.getFullYear();
   
-    return `${day} ${date} ${month} ${year}`;
+    return `${date} ${month} ${year}`;
   }
