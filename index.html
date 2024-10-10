@@ -3,22 +3,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index-style.css">
+    <script src="js/weather.js"></script>
     <title>Daily Weather</title>
 </head>
 <body>
+    <input type="text" autocomplete="off" class="search-box" placeholder="Search for a city..."/>
     <div class="website-body-currentWeather">
         <div class="weather-dateDiv">
             <h3 class="weather-day">Monday</h3>
-            <h4 class="weather-date"> 1 Jan 2000</h4>
+            <h5 class="weather-date"> 1 Jan 2000</h5>
         </div>
         <div class="weather-cityDiv">
             <img src="assets/images/location-dot-solid.svg" alt="location-dot-solid" width="15px">
-            <h4>New York, US</h4>
+            <h5 class="weather-city">New York, US</h5>
         </div>
         <div class="weather-currentWeather">
             <img src="assets/images/cloud-solid.svg" alt="cloud-solid" width="50px">
             <h2 class="weather-tem">0<span>°C</span></h2>
-            <h3>Sunny</h3>
+            <h3 class="weather-name">Sunny</h3>
         </div>
     </div>
 </body>

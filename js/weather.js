@@ -20,17 +20,17 @@ const api = {
   }
   
   function displayResults (weather) {
-    let city = document.querySelector('.location .city');
+    let city = document.querySelector('.weather-cityDiv .weather-city');
     city.innerText = `${weather.name}, ${weather.sys.country}`;
   
     let now = new Date();
-    let date = document.querySelector('.location .date');
+    let date = document.querySelector('.weather-dateDiv .weather-date');
     date.innerText = dateBuilder(now);
   
-    let temp = document.querySelector('.current .temp');
+    let temp = document.querySelector('.weather-currentWeather .weather-temp');
     temp.innerHTML = `${Math.round(weather.main.temp)}<span>°c</span>`;
   
-    let weather_el = document.querySelector('.current .weather');
+    let weather_el = document.querySelector('.weather-currentWeather .weather-name');
     weather_el.innerText = weather.weather[0].main;
   
     let hilow = document.querySelector('.hi-low');
