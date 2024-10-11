@@ -5,6 +5,8 @@ const api = {
   
   const searchbox = document.querySelector(".searchLocation");
   searchbox.addEventListener('keypress', setQuery);
+
+  const weatherImage = document.querySelector(".weather-image");
   
   function setQuery(evt) {
     if (evt.keyCode == 13) {
@@ -38,6 +40,18 @@ const api = {
   
     let hilow = document.querySelector('.hi-low');
     hilow.innerText = `${Math.round(weather.main.temp_min)}°c / ${Math.round(weather.main.temp_max)}°c`;
+  }
+
+  function setBackground(weather) {
+    if (weather == "Clear") {
+      weatherImage.src = "assets/images/cloud-sun-fill.svg";
+    } else if (weather == "Drizzle") {
+      weatherImage.src = "assets/images/cloud-drizzle-fill.svg";
+    } else if (weather == "Thunderstorm") {
+      weatherImage.src = "assets/images/cloud-lighting-fill.svg";
+    } else if (weather == "Rain") {
+      weatherImage.src = "assets/images/cloud-rain-heavy-fill.svg";
+    }
   }
 
   function dayBuilder (d) {
