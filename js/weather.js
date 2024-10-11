@@ -24,6 +24,7 @@ const api = {
   function displayResults (weather) {
     let city = document.querySelector('.weather-cityDiv .weather-city');
     city.innerText = `${weather.name}, ${weather.sys.country}`;
+    setBackground(weather)
   
     let now = new Date();
     let date = document.querySelector('.weather-dateDiv .weather-date');
