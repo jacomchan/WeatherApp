@@ -26,6 +26,9 @@ const api = {
     let now = new Date();
     let date = document.querySelector('.weather-dateDiv .weather-date');
     date.innerText = dateBuilder(now);
+
+    let day = document.querySelector('.weather-dateDiv .weather-day');
+    day.innerText = dayBuilder(now);
   
     let temp = document.querySelector('.weather-currentWeather .weather-temp');
     temp.innerText = `${Math.round(weather.main.temp)}<span>°c</span>`;
@@ -47,9 +50,7 @@ const api = {
   
   function dateBuilder (d) {
     let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   
-    let day = days[d.getDay()];
     let date = d.getDate();
     let month = months[d.getMonth()];
     let year = d.getFullYear();
