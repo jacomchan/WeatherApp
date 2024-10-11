@@ -45,13 +45,19 @@ const api = {
 
   function setBackground(weather) {
     if (weather == "Clear") {
-      weatherImage.src = "assets/images/cloud-sun-fill.svg";
+      weatherImage.src = "assets/images/brightness-high-fill.svg";
     } else if (weather == "Drizzle") {
       weatherImage.src = "assets/images/cloud-drizzle-fill.svg";
     } else if (weather == "Thunderstorm") {
       weatherImage.src = "assets/images/cloud-lighting-fill.svg";
     } else if (weather == "Rain") {
       weatherImage.src = "assets/images/cloud-rain-heavy-fill.svg";
+    } else if (weather == "Snow") {
+      weatherImage.src = "assets/images/cloud-snow-fill.svg";
+    } else if (weather == "Clouds") {
+      weatherImage.src = "assets/images/cloud-sun-fill.svg";
+    } else if (weather == "Fog") {
+      weatherImage.src = "assets/images/clouds-fog-fill.svg";
     }
   }
 
