@@ -31,7 +31,7 @@ const api = {
     day.innerText = dayBuilder(now);
   
     let temp = document.querySelector('.weather-currentWeather .weather-temp');
-    temp.innerText = `${Math.round(weather.main.temp)}<span>°c</span>`;
+    temp.innerText = `${Math.round(weather.main.temp)}°C`;
   
     let weather_el = document.querySelector('.weather-currentWeather .weather-name');
     weather_el.innerText = weather.weather[0].main;
