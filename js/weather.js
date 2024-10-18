@@ -42,22 +42,53 @@ const api = {
     hilow.innerText = `${Math.round(weather.main.temp_min)}°c / ${Math.round(weather.main.temp_max)}°c`;
   }
 
+<<<<<<< HEAD
+  function setBackground(weatherType) {
+    let weatherImage = document.querySelector(".weather-image");
+
+    if (weatherType == "Clear") {
+=======
   function setBackground(weatherName) {
     let weatherImage = document.querySelector(".weather-image");
 
     if (weatherName == "Clear") {
+>>>>>>> 12f429255db085f38a9fb3c6e6d277a3f84f6871
       weatherImage.src = "assets/images/brightness-high-fill.svg";
+<<<<<<< HEAD
+    } else if (weatherType == "Drizzle") {
+=======
     } else if (weatherName == "Drizzle") {
+>>>>>>> 12f429255db085f38a9fb3c6e6d277a3f84f6871
       weatherImage.src = "assets/images/cloud-drizzle-fill.svg";
+<<<<<<< HEAD
+    } else if (weatherType == "Thunderstorm") {
+=======
     } else if (weatherName == "Thunderstorm") {
+>>>>>>> 12f429255db085f38a9fb3c6e6d277a3f84f6871
       weatherImage.src = "assets/images/cloud-lighting-fill.svg";
+<<<<<<< HEAD
+    } else if (weatherType == "Rain") {
+=======
     } else if (weatherName == "Rain") {
+>>>>>>> 12f429255db085f38a9fb3c6e6d277a3f84f6871
       weatherImage.src = "assets/images/cloud-rain-heavy-fill.svg";
+<<<<<<< HEAD
+    } else if (weatherType == "Snow") {
+=======
     } else if (weatherName == "Snow") {
+>>>>>>> 12f429255db085f38a9fb3c6e6d277a3f84f6871
       weatherImage.src = "assets/images/cloud-snow-fill.svg";
+<<<<<<< HEAD
+    } else if (weatherType == "Clouds") {
+=======
     } else if (weatherName == "Clouds") {
+>>>>>>> 12f429255db085f38a9fb3c6e6d277a3f84f6871
       weatherImage.src = "assets/images/cloud-sun-fill.svg";
+<<<<<<< HEAD
+    } else if (weatherType == "Fog") {
+=======
     } else if (weatherName == "Fog") {
+>>>>>>> 12f429255db085f38a9fb3c6e6d277a3f84f6871
       weatherImage.src = "assets/images/clouds-fog-fill.svg";
     }
   }
