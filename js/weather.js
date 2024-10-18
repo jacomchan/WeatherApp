@@ -5,8 +5,6 @@ const api = {
   
   const searchbox = document.querySelector(".searchLocation");
   searchbox.addEventListener('keypress', setQuery);
-
-  const weatherImage = document.querySelector(".weather-image");
   
   function setQuery(evt) {
     if (evt.keyCode == 13) {
@@ -24,7 +22,7 @@ const api = {
   function displayResults (weather) {
     let city = document.querySelector('.weather-cityDiv .weather-city');
     city.innerText = `${weather.name}, ${weather.sys.country}`;
-    setBackground(weather)
+    setBackground(weather.weather)
   
     let now = new Date();
     let date = document.querySelector('.weather-dateDiv .weather-date');
@@ -38,25 +36,28 @@ const api = {
   
     let weather_el = document.querySelector('.weather-currentWeather .weather-name');
     weather_el.innerText = weather.weather[0].main;
+    setBackground(weather.weather[0].main)
   
     let hilow = document.querySelector('.hi-low');
     hilow.innerText = `${Math.round(weather.main.temp_min)}°c / ${Math.round(weather.main.temp_max)}°c`;
   }
 
-  function setBackground(weather) {
-    if (weather == "Clear") {
+  function setBackground(weatherName) {
+    let weatherImage = document.querySelector(".weather-image");
+
+    if (weatherName == "Clear") {
       weatherImage.src = "assets/images/brightness-high-fill.svg";
-    } else if (weather == "Drizzle") {
+    } else if (weatherName == "Drizzle") {
       weatherImage.src = "assets/images/cloud-drizzle-fill.svg";
-    } else if (weather == "Thunderstorm") {
+    } else if (weatherName == "Thunderstorm") {
       weatherImage.src = "assets/images/cloud-lighting-fill.svg";
-    } else if (weather == "Rain") {
+    } else if (weatherName == "Rain") {
       weatherImage.src = "assets/images/cloud-rain-heavy-fill.svg";
-    } else if (weather == "Snow") {
+    } else if (weatherName == "Snow") {
       weatherImage.src = "assets/images/cloud-snow-fill.svg";
-    } else if (weather == "Clouds") {
+    } else if (weatherName == "Clouds") {
       weatherImage.src = "assets/images/cloud-sun-fill.svg";
-    } else if (weather == "Fog") {
+    } else if (weatherName == "Fog") {
       weatherImage.src = "assets/images/clouds-fog-fill.svg";
     }
   }
