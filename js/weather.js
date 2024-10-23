@@ -46,7 +46,7 @@ const api = {
 
     if (weatherName == "Clear") {
       weatherImage.src = "assets/images/brightness-high-fill.svg";
-    } else if (weatherType == "Drizzle") {
+    } else if (weatherName == "Drizzle") {
       weatherImage.src = "assets/images/cloud-drizzle-fill.svg";
     } else if (weatherName == "Thunderstorm") {
       weatherImage.src = "assets/images/cloud-lighting-fill.svg";
