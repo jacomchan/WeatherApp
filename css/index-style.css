@@ -51,3 +51,11 @@ body {
   gap: 10px;
   flex-direction: column;
 }
+
+input{
+  border-radius: 0.25em;
+  border: 2px solid;
+  border-color: black;
+  height: 30px;
+  padding: 5px;
+}
