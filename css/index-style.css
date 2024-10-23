@@ -21,7 +21,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 50px;
+  gap: 25px;
   background-image: linear-gradient(16deg, #23a9f2, #008ad2);
   border-radius: 1em;
   width: 250px;
@@ -50,12 +50,13 @@ body {
   display: flex;
   gap: 10px;
   flex-direction: column;
+  padding-top: 50px;
 }
 
 input{
   border-radius: 0.25em;
   border: 2px solid;
   border-color: black;
-  height: 30px;
+  height: 25px;
   padding: 5px;
 }
