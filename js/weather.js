@@ -58,7 +58,7 @@ const api = {
     } else if (weatherName == "Clouds") {
       weatherImage.src = "assets/images/cloud-sun-fill.svg";
     } else if (weatherName == "Fog") {
-      weatherImage.src = "assets/images/clouds-fog-fill.svg";
+      weatherImage.src = "assets/images/cloud-fog-fill.svg";
     }
   }
 
