@@ -5,6 +5,7 @@ const api = {
   
   const searchbox = document.querySelector(".searchLocation");
   searchbox.addEventListener('keypress', setQuery);
+  getResults("New York, US");
   
   function setQuery(evt) {
     if (evt.keyCode == 13) {
