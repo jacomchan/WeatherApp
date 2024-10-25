@@ -22,6 +22,7 @@ const api = {
   
   function displayResults (weather) {
     let city = document.querySelector('.weather-cityDiv .weather-city');
+    let title = document.querySelector('.title')
     city.innerText = `${weather.name}, ${weather.sys.country}`;
   
     let now = new Date();
