@@ -7,5 +7,9 @@ To import WeatherApp to your website copy these lines of code and paste them in 
 Inside HTML Code:
 ```
 <link rel="stylesheet" href="jacomchan.github.io/WeatherApp/css/index-style.css">
+
 <script src="jacomchan.github.io/WeatherApp/js/weather.js"></script>
 ```
+
+## Thanks!
+THanks for using WeatherApp for your weather needs!
