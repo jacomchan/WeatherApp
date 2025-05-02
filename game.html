@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Roblox Game Player Count</title>
+</head>
+<body>
+  <h1>Players Currently Playing</h1>
+  <p id="playerCount">Loading...</p>
+
+  <script>
+    const placeId = '4872321990'; // Your game’s place ID
+
+    // Step 1: Get the Universe ID using the place ID
+    fetch(`https://apis.roblox.com/universes/v1/places/${placeId}/universe`)
+      .then(response => response.json())
+      .then(data => {
+        const universeId = data.universeId;
+
+        // Step 2: Use the Universe ID to get the game info
+        return fetch(`https://games.roblox.com/v1/games?universeIds=${universeId}`);
+      })
+      .then(response => response.json())
+      .then(data => {
+        const gameInfo = data.data[0];
+        const players = gameInfo.playing;
+        document.getElementById('playerCount').innerText = `${players} players online right now.`;
+      })
+      .catch(error => {
+        console.error('Error fetching player count:', error);
+        document.getElementById('playerCount').innerText = 'Failed to load player count.';
+      });
+  </script>
+</body>
+</html>
